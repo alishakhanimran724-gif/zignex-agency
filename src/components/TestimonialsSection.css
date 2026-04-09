@@ -1,0 +1,121 @@
+#testi {
+  background: linear-gradient(180deg, #f0f4ff, #e8eeff);
+  padding: 100px 6% 120px;
+}
+
+.testi-inner { max-width: 1200px; margin: 0 auto; }
+
+.testi-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.testi-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #0062ff;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.testi-heading {
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 800;
+  color: #000023;
+  line-height: 1.2;
+}
+
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.testi-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 50px 28px 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  margin-top: 40px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testi-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+}
+
+.testi-quote {
+  position: absolute;
+  top: 18px; left: 22px;
+  font-size: 32px;
+  font-family: Georgia, serif;
+  color: rgba(0, 98, 255, 0.10);
+  line-height: 1;
+  font-weight: 900;
+}
+
+.testi-av-wrap {
+  position: absolute;
+  top: -36px; left: 50%;
+  transform: translateX(-50%);
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #0062ff;
+  box-shadow: 0 4px 12px rgba(0, 98, 255, 0.15);
+}
+
+.testi-av {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800;
+  font-size: 20px;
+  color: #fff;
+  background: linear-gradient(135deg, #555, #888);
+}
+
+.testi-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #000023;
+  margin-top: 10px;
+}
+
+.testi-role {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.testi-txt {
+  font-size: 13.5px;
+  color: #777;
+  line-height: 1.75;
+  font-style: italic;
+  margin-top: 16px;
+  padding: 0 6px;
+}
+
+.testi-stars {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin-top: 18px;
+}
+
+.testi-stars svg {
+  width: 16px; height: 16px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .testi-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+  .testi-card { margin-top: 50px; }
+}

@@ -1,0 +1,18 @@
+/* TeamSection uses shared styles from App.css:
+   .tm-grid, .team-inner, .tm-card, .tm-img, .tm-over,
+   .tm-role, .tm-name, .tm-soc, .btn-gold, .sec-tag, .sec-h
+   — all defined globally to keep things DRY. */
+
+/* Any section-specific overrides go here */
+#team {
+  background: #fff;
+}
+
+#team .sec-tag {
+  color: #0062ff;
+  border-color: #0062ff;
+}
+
+#team .sec-h {
+  color: #000023;
+}
