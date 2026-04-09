@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="navbar-inner">
 
           {/* Logo */}
-          <a href="#" className="logo">
+          <a href="#hero" className="logo">
             <div className="logo-icon">
               <img
                 src="logo.png"
