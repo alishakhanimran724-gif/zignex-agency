@@ -1,5 +1,7 @@
 import './Hero.css';
 
+
+
 const PORTFOLIO_IMAGES = [
   { style: { top:'6%',  left:'48%', width:'13.5%', height:'28%', borderRadius:'20px' }, alt: 'Portfolio 1' },
   { style: { top:'2%',  left:'62%', width:'15.5%', height:'48%', borderRadius:'7px'  }, alt: 'Portfolio 2' },
@@ -37,7 +39,7 @@ export default function Hero() {
     <section className="hero" id="hero">
       {/* Background moon image */}
       <div className="hero-moon">
-        <img src="/public/image.png" alt="" onError={e => e.target.style.display = 'none'} />
+        <img src="image.png" alt="" onError={e => e.target.style.display = 'none'} />
       </div>
 
       <div className="hero-gradient" />
@@ -71,7 +73,7 @@ export default function Hero() {
               key={i}
               className="portfolio-img"
               style={{ ...img.style, objectFit: 'cover', position: 'absolute', zIndex: 5 }}
-              src="../public/zig.png"
+              src="zig.png"
               alt={img.alt}
               onError={handleImgError}
             />
