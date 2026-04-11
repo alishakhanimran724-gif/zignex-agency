@@ -1,27 +1,32 @@
 import './Hero.css';
 
-
-
 const PORTFOLIO_IMAGES = [
-  { style: { top:'6%',  left:'48%', width:'13.5%', height:'28%', borderRadius:'20px' }, alt: 'Portfolio 1' },
-  { style: { top:'2%',  left:'62%', width:'15.5%', height:'48%', borderRadius:'7px'  }, alt: 'Portfolio 2' },
-  { style: { top:'6%',  left:'78%', width:'13.5%', height:'28%', borderRadius:'12px' }, alt: 'Portfolio 3' },
-  { style: { top:'35%', left:'46%', width:'15.5%', height:'30%', borderRadius:'20px' }, alt: 'Portfolio 4' },
-  { style: { top:'51%', left:'62%', width:'15.5%', height:'48%', borderRadius:'12px' }, alt: 'Portfolio 5' },
-  { style: { top:'35%', left:'78%', width:'15.5%', height:'30%', borderRadius:'20px' }, alt: 'Portfolio 6' },
-  { style: { top:'66%', left:'48%', width:'13.5%', height:'28%', borderRadius:'12px' }, alt: 'Portfolio 7' },
-  { style: { top:'66%', left:'78%', width:'13.5%', height:'28%', borderRadius:'12px' }, alt: 'Portfolio 8' },
+  { src: 'img8.png',  style: { top:'calc(6% - 4px)',  left:'calc(48% + 2px)', width:'13.5%', height:'calc(28% + 2px)', borderRadius:'20px' }, alt: 'Portfolio 1' },
+
+  { src: 'img9.png',  style: { top:'calc(2% - 18px)',  left:'calc(62% + 2px)', width:'15.5%', height:'calc(48% + 16px)', borderRadius:'7px'  }, alt: 'Portfolio 2' },
+
+  { src: 'img10.png', style: { top:'calc(6% - 4px)',  left:'calc(78% + 2px)', width:'13.5%', height:'calc(28% + 2px)', borderRadius:'12px' }, alt: 'Portfolio 3' },
+
+  { src: 'img11.png', style: { top:'calc(35% - 2px)', left:'calc(46% + 2px)', width:'15.5%', height:'calc(30% + 2px)', borderRadius:'20px' }, alt: 'Portfolio 4' },
+
+  { src: 'img12.png', style: { top:'calc(51% - 2px)', left:'calc(62% + 2px)', width:'15.5%', height:'calc(45% + 2px)', borderRadius:'12px' }, alt: 'Portfolio 5' },
+
+  { src: 'img13.png', style: { top:'calc(35% - 2px)', left:'calc(78% + 2px)', width:'15.5%', height:'calc(30% + 2px)', borderRadius:'20px' }, alt: 'Portfolio 6' },
+
+  { src: 'img14.png', style: { top:'calc(66% - 0px)', left:'calc(48% + 15px)', width:'12.5%', height:'calc(28% + 0px)', borderRadius:'12px' }, alt: 'Portfolio 7' },
+
+  { src: 'img15.png', style: { top:'calc(66% - 0px)', left:'calc(78% + 2px)', width:'12.5%', height:'calc(28% + 0px)', borderRadius:'12px' }, alt: 'Portfolio 8' },
 ];
 
 const MOBILE_CARDS = [
-  { cls: 'pm-net-tl',   alt: 'Social Post'    },
-  { cls: 'pm-wosh',     alt: 'Wosh Sticker'   },
-  { cls: 'pm-medicine', alt: 'Medicine'       },
-  { cls: 'pm-pakind',   alt: 'Pak vs Ind'     },
-  { cls: 'pm-net-r',    alt: 'NET Social'     },
-  { cls: 'pm-dogchew',  alt: 'Dog Chew'       },
-  { cls: 'pm-pawstop-l',alt: 'Pawstop Left'   },
-  { cls: 'pm-pawstop-r',alt: 'Pawstop Right'  },
+  { cls: 'pm-net-tl',    src: 'img8.png',  alt: 'Social Post'   },
+  { cls: 'pm-wosh',      src: 'img9.png',  alt: 'Wosh Sticker'  },
+  { cls: 'pm-medicine',  src: 'img10.png', alt: 'Medicine'      },
+  { cls: 'pm-pakind',    src: 'img11.png', alt: 'Pak vs Ind'    },
+  { cls: 'pm-net-r',     src: 'img12.png', alt: 'NET Social'    },
+  { cls: 'pm-dogchew',   src: 'img13.png', alt: 'Dog Chew'      },
+  { cls: 'pm-pawstop-l', src: 'img14.png', alt: 'Pawstop Left'  },
+  { cls: 'pm-pawstop-r', src: 'img15.png', alt: 'Pawstop Right' },
 ];
 
 const fallbackStyle = {
@@ -73,7 +78,7 @@ export default function Hero() {
               key={i}
               className="portfolio-img"
               style={{ ...img.style, objectFit: 'cover', position: 'absolute', zIndex: 5 }}
-              src="zig.png"
+              src={img.src}
               alt={img.alt}
               onError={handleImgError}
             />
@@ -83,10 +88,10 @@ export default function Hero() {
 
       {/* Mobile portfolio grid */}
       <div className="portfolio-mobile">
-        {MOBILE_CARDS.map(({ cls, alt }) => (
+        {MOBILE_CARDS.map(({ cls, src, alt }) => (
           <div key={cls} className={`pm-card ${cls}`}>
             <img
-              src="zig.jfif"
+              src={src}
               alt={alt}
               onError={e => { e.target.style.display = 'none'; e.target.parentElement.style.background = '#0d1533'; }}
             />
